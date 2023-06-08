@@ -1,0 +1,39 @@
+@import 'layout';
+
+body{background-color: hsl(233, 47%, 7%);}
+
+.card{background-color: hsl(244, 38%, 16%);}
+
+.card__text-box{
+    .heading{
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #fff;
+
+        span{color:hsl(277, 64%, 61%);}
+    }
+
+    .paragraph{
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: .7rem;
+        font-family: 'Inter', sans-serif;
+        line-height: 1.2rem;
+    }
+}
+
+////////////////
+/// UTILITIES
+.text{
+    font-size: .5rem; 
+    font-weight: 400;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    letter-spacing: .1rem;
+}
+.num{
+    font-size: 1rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #fff;
+    letter-spacing: .08rem;
+}

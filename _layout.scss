@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin respond{@media (max-width:800px){@content;}}
+
+%flex{
+    display: flex;
+    flex-direction: column;
+    grid-row: 7/8;
+}
+
+.card{
+    width: 50rem;
+    height: 20rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    
+    @include respond{
+        width: 90vw;
+        grid-template-columns: 100%;
+        grid-template-rows: 100% 100%;
+        top: 35%;
+    }
+
+    &__text-box{
+        @include respond{grid-row: 2/-1;}
+        
+        display: grid;
+        grid-template-columns:  repeat(8, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+        .heading{
+            grid-row: 2/3;
+            grid-column: 2/-3;
+            font-size: 22px;
+        }
+
+        .paragraph{
+            grid-row: 4/5;
+            grid-column: 2/-3;
+        }
+
+        .company{
+            @extend %flex;
+            grid-column: 2/3;
+        }
+
+        .template{
+            @extend %flex;
+            grid-column: 4/5;
+        }
+
+        .query{
+            @extend %flex;
+            grid-column: 6/8;
+        }
+    }
+
+    &__img-box{
+        img{
+            width: 100%; 
+            height: 100%;
+        }
+        
+        .mob-img{display: none;}
+
+        @include respond{
+            .mob-img{display: block;}
+            .desk-img{display: none;}
+        }
+    }
+}

@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.card__text-box .query, .card__text-box .template, .card__text-box .company {
+  display: flex;
+  flex-direction: column;
+  grid-row: 7/8;
+}
+
+.card {
+  width: 50rem;
+  height: 20rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+}
+@media (max-width: 800px) {
+  .card {
+    width: 90vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 100% 100%;
+    top: 35%;
+  }
+}
+.card__text-box {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+@media (max-width: 800px) {
+  .card__text-box {
+    grid-row: 2/-1;
+  }
+}
+.card__text-box .heading {
+  grid-row: 2/3;
+  grid-column: 2/-3;
+  font-size: 22px;
+}
+.card__text-box .paragraph {
+  grid-row: 4/5;
+  grid-column: 2/-3;
+}
+.card__text-box .company {
+  grid-column: 2/3;
+}
+.card__text-box .template {
+  grid-column: 4/5;
+}
+.card__text-box .query {
+  grid-column: 6/8;
+}
+.card__img-box img {
+  width: 100%;
+  height: 100%;
+}
+.card__img-box .mob-img {
+  display: none;
+}
+@media (max-width: 800px) {
+  .card__img-box .mob-img {
+    display: block;
+  }
+  .card__img-box .desk-img {
+    display: none;
+  }
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+.card {
+  background-color: hsl(244, 38%, 16%);
+}
+
+.card__text-box .heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.card__text-box .heading span {
+  color: hsl(277, 64%, 61%);
+}
+.card__text-box .paragraph {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.7rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.2rem;
+}
+
+.text {
+  font-size: 0.5rem;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+  letter-spacing: 0.1rem;
+}
+
+.num {
+  font-size: 1rem;
+  font-family: "Lexend Deca", sans-serif;
+  color: #fff;
+  letter-spacing: 0.08rem;
+}/*# sourceMappingURL=style.css.map */
