@@ -26,7 +26,7 @@
     grid-template-rows: 100%;
     
     @include respond{
-        width: 90vw;
+        width: 25rem;
         grid-template-columns: 100%;
         grid-template-rows: 100% 100%;
         top: 35%;
